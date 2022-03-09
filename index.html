@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="keywords" content="Dosha, dosha imbalances, pitta, kapha, vata, healtygamergg, dr.k, rugleh">
+    <meta name="description" content="Ayurveda | Vikruti Online Quiz">
+    <meta name="author" content="Rugleh">
+
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137846449-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-137846449-6');
+    </script>
+
+
+    <script defer src="fontawesome/js/solid.js"></script>
+    <script defer src="fontawesome/js/fontawesome.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Bootstrap CSS -->
+    
+    <link rel="icon" href="favicon.png" type="image/png"> 
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="output.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Sans"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>Vikruti Quiz</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title text-left main-container">
+        Physcological Imbalances of the Doshas
+      </h1>
+      <h2 class="subtitle text-left ">
+        American Institute of Vedic Studies / David Frawley
+      </h2>
+      <p class="lead"><a href="https://drive.google.com/file/d/1k2B2riKGa5xsbJDMpJpfNa-AqUga-bID/view?ck_subscriber_id=736076056">Source 1</a> -  <a href="https://drive.google.com/file/d/1R-q7FXmaXqlQK6W3XnMMa1DYgiIU7-fz/view?ck_subscriber_id=736076056">Source 2 </a></p>
+
+      <form class="form">
+        <div class="row"">
+
+          <div class="col-md-6" data-aos="fade-up">
+            <h4 class="question">Temperament</h4>
+            <div class="inputGroup">
+              <input id="radio1" value="wind" name="question1" type="radio" />
+              <label for="radio1"
+                >Nervous, Changeable</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio2" value="fire" name="question1" type="radio" />
+              <label for="radio2"
+                >Motivated, Determined</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio3" value="water" name="question1" type="radio" />
+              <label for="radio3"
+                >Content, Conservative</label
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up">
+            <h4 class="question">Positive Emotions</h4>
+            <div class="inputGroup">
+              <input id="radio4" value="wind" name="question2" type="radio" />
+              <label for="radio4"
+                >  Adaptability</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio5" value="fire" name="question2" type="radio" />
+              <label for="radio5">  Courage</label>
+            </div>
+            <div class="inputGroup">
+              <input id="radio6" value="water" name="question2" type="radio" />
+              <label for="radio6">  Love</label>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up">
+            <h4 class="question">Negative Emotions</h4>
+            <div class="inputGroup">
+              <input id="radio7" value="wind" name="question3" type="radio" />
+              <label for="radio7">  Fear</label>
+            </div>
+            <div class="inputGroup">
+              <input id="radio8" value="fire" name="question3" type="radio" />
+              <label for="radio8">  Anger</label>
+            </div>
+            <div class="inputGroup">
+              <input id="radio9" value="water" name="question3" type="radio" />
+              <label for="radio9">  Attachment</label>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up">
+            <h4 class="question">Sense of Ego</h4>
+            <div class="inputGroup">
+              <input id="radio10" value="wind" name="question4" type="radio" />
+              <label for="radio10"
+                >  Weak, erratic, prone to
+                extremes</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio11" value="fire" name="question4" type="radio" />
+              <label for="radio11"
+                >  Strong, fixed, proud</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio12" value="water" name="question4" type="radio" />
+              <label for="radio12"
+                >  Bassed on familiy
+                possessions</label
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up">
+            <h4 class="question">Sensivity</h4>
+            <div class="inputGroup">
+              <input id="radio13" value="wind" name="question5" type="radio" />
+              <label for="radio13"
+                >  Hypersensivity, easily hurt</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio14" value="fire" name="question5" type="radio" />
+              <label for="radio14"
+                >  Insensitive, critical</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio15" value="water" name="question5" type="radio" />
+              <label for="radio15"
+                >  Insensitive, self-content</label
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up">
+            <h4 class=" question">Psychological Disease Tendency</h4>
+            <div class="inputGroup">
+              <input id="radio16" value="wind" name="question6" type="radio" />
+              <label for="radio16"
+                >  Easly imbalanced, prone to
+                psychological problems</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio17" value="fire" name="question6" type="radio" />
+              <label for="radio17"
+                >  Disturbed when obstructed</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio18" value="water" name="question6" type="radio" />
+              <label for="radio18"
+                >  Generally content, but strong
+                underlying emotions</label
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up">
+            <h4 class="question">Elemental Imbalances</h4>
+            <div class="inputGroup">
+              <input id="radio19" value="wind" name="question7" type="radio" />
+              <label for="radio19"
+                >  Undegrounded, spaced out</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio20" value="fire" name="question7" type="radio" />
+              <label for="radio20"
+                >  Compulsive, fixated</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio21" value="water" name="question7" type="radio" />
+              <label for="radio21"
+                >  Dull, unresponsive</label
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up">
+            <h4 class="question">Psychological Extremes</h4>
+            <div class="inputGroup">
+              <input id="radio22" value="wind" name="question8" type="radio" />
+              <label for="radio22"
+                >  Hysteria, suicidal</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio23" value="fire" name="question8" type="radio" />
+              <label for="radio23"
+                >  Psychopat, sociopath</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio24" value="water" name="question8" type="radio" />
+              <label for="radio24"
+                >  Dependent, Childish</label
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up">
+            <h4 class="question">Emotional Tolerance</h4>
+            <div class="inputGroup">
+              <input id="radio25" value="wind" name="question9" type="radio" />
+              <label for="radio25"
+                >  Easily disturbed, reacts quickly</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio26" value="fire" name="question9" type="radio" />
+              <label for="radio26"
+                >  Good resistance, holds grudges</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio27" value="water" name="question9" type="radio" />
+              <label for="radio27"
+                >  Slow to disturb, unwilling to change</label
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up">
+            <h4 class="question">Ability to Handle Stress</h4>
+            <div class="inputGroup">
+              <input id="radio28" value="wind" name="question10" type="radio" />
+              <label for="radio28"
+                >  Very little, breaks down easily</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio29" value="fire" name="question10" type="radio" />
+              <label for="radio29"
+                >  Moderate, gets angry</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio30" value="water" name="question10" type="radio" />
+              <label for="radio30"
+                >  Handles well, ignores</label
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up">
+            <h4 class="question">Anger</h4>
+            <div class="inputGroup">
+              <input id="radio31" value="wind" name="question11" type="radio" />
+              <label for="radio31"
+                >  Erratic</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio32" value="fire" name="question11" type="radio" />
+              <label for="radio32"
+                >  Quick, steady</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio33" value="water" name="question11" type="radio" />
+              <label for="radio33"
+                >  Slow to anger</label
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up">
+            <h4 class="question">Fear</h4>
+            <div class="inputGroup">
+              <input id="radio34" value="wind" name="question12" type="radio" />
+              <label for="radio34"
+                >  Frequent, strong</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio35" value="fire" name="question12" type="radio" />
+              <label for="radio35"
+                >  Rare</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio36" value="water" name="question12" type="radio" />
+              <label for="radio36"
+                >  Steady but weak</label
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up">
+            <h4 class="question">Attachment</h4>
+            <div class="inputGroup">
+              <input id="radio37" value="wind" name="question13" type="radio" />
+              <label for="radio37"
+                >  Changing, detached</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio38" value="fire" name="question13" type="radio" />
+              <label for="radio38"
+                >  Fixed, focused</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio39" value="water" name="question13" type="radio" />
+              <label for="radio39"
+                >  Deep-seated, unable to go</label
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up">
+            <h4 class="question">Depression</h4>
+            <div class="inputGroup">
+              <input id="radio40" value="wind" name="question14" type="radio" />
+              <label for="radio40"
+                >  Severe, up and down</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio41" value="fire" name="question14" type="radio" />
+              <label for="radio41"
+                >  Based on sense of failure</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio42" value="water" name="question14" type="radio" />
+              <label for="radio42"
+                >  Steady but low grade</label
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up">
+            <h4 class="question">Anxiety</h4>
+            <div class="inputGroup">
+              <input id="radio43" value="wind" name="question15" type="radio" />
+              <label for="radio43"
+                >  Easily falls into</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio44" value="fire" name="question15" type="radio" />
+              <label for="radio44"
+                >  Rare</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio45" value="water" name="question15" type="radio" />
+              <label for="radio45"
+                >  Low grade only</label
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up">
+            <h4 class="question">Compulsions</h4>
+            <div class="inputGroup">
+              <input id="radio46" value="wind" name="question16" type="radio" />
+              <label for="radio46"
+                >  Trivia, novelty, freedom</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio47" value="fire" name="question16" type="radio" />
+              <label for="radio47"
+                >  Archievement, victory</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio48" value="water" name="question16" type="radio" />
+              <label for="radio48"
+                >  Possession, ownership</label
+              >
+            </div>
+          </div>
+            
+          <!--  16 -->
+
+          <div class="col-md-6" data-aos="fade-up">
+            <h4 class="question">Addictions</h4>
+            <div class="inputGroup">
+              <input id="radio49" value="wind" name="question17" type="radio" />
+              <label for="radio49"
+                >  Entertainment, sensations</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio50" value="fire" name="question17" type="radio" />
+              <label for="radio50"
+                >     Alcohol, power</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio51" value="water" name="question17" type="radio" />
+              <label for="radio51"
+                >  Food, possessions</label
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up">
+            <h4 class="question">Rationality</h4>
+            <div class="inputGroup">
+              <input id="radio52" value="wind" name="question18" type="radio" />
+              <label for="radio52"
+                >  Prone to imagination</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio53" value="fire" name="question18" type="radio" />
+              <label for="radio53"
+                >  Strong but can be biased</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio54" value="water" name="question18" type="radio" />
+              <label for="radio54"
+                >  Weak, slow, steady</label
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up">
+            <h4 class="question">Attention</h4>
+            <div class="inputGroup">
+              <input id="radio55" value="wind" name="question19" type="radio" />
+              <label for="radio55"
+                >  Variable, changing</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio56" value="fire" name="question19" type="radio" />
+              <label for="radio56"
+                >  Steady, can be obsessive</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio57" value="water" name="question19" type="radio" />
+              <label for="radio57"
+                >  Slow, lack of</label
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up">
+            <h4 class="question">Activity Level</h4>
+            <div class="inputGroup">
+              <input id="radio58" value="wind" name="question20" type="radio" />
+              <label for="radio58"
+                >  High, hyper, easily exhausted</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio59" value="fire" name="question20" type="radio" />
+              <label for="radio59"
+                >  Steady, focused</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio60" value="water" name="question20" type="radio" />
+              <label for="radio60"
+                >  Slow, prone to inaction</label
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up">
+            <h4 class="question">Effort</h4>
+            <div class="inputGroup">
+              <input id="radio61" value="wind" name="question21" type="radio" />
+              <label for="radio61"
+                >  Quick, unsustained</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio62" value="fire" name="question21" type="radio" />
+              <label for="radio62"
+                >  Steady, determined</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio63" value="water" name="question21" type="radio" />
+              <label for="radio63"
+                >  Slow, but can endure</label
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up">
+            <h4 class="question">Memory</h4>
+            <div class="inputGroup">
+              <input id="radio64" value="wind" name="question22" type="radio" />
+              <label for="radio64"
+                >  Quick, but absent-minded</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio65" value="fire" name="question22" type="radio" />
+              <label for="radio65"
+                >  Sharp, clear</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio66" value="water" name="question22" type="radio" />
+              <label for="radio66"
+                >  Slow but steady</label
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up">
+            <h4 class="question">Speech</h4>
+            <div class="inputGroup">
+              <input id="radio67" value="wind" name="question23" type="radio" />
+              <label for="radio67"
+                >  Fast, frecuent</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio68" value="fire" name="question23" type="radio" />
+              <label for="radio68"
+                >  Sharp, cutting</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio69" value="water" name="question23" type="radio" />
+              <label for="radio69"
+                >  slow, melodious</label
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up">
+            <h4 class="question">Sleep</h4>
+            <div class="inputGroup">
+              <input id="radio70" value="wind" name="question24" type="radio" />
+              <label for="radio70"
+                >  Poor, disturbed</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio71" value="fire" name="question24" type="radio" />
+              <label for="radio71"
+                >  Variable</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio72" value="water" name="question24" type="radio" />
+              <label for="radio72"
+                >  Excess</label
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up">
+            <h4 class="question">Dreams</h4>
+            <div class="inputGroup">
+              <input id="radio73" value="wind" name="question25" type="radio" />
+              <label for="radio73"
+                >  Frequent, disturbed</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio74" value="fire" name="question25" type="radio" />
+              <label for="radio74"
+                >  Moderate, colorful</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio75" value="water" name="question25" type="radio" />
+              <label for="radio75"
+                >  Infrequent, romantic</label
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up">
+            <h4 class="question">Life-Style</h4>
+            <div class="inputGroup">
+              <input id="radio76" value="wind" name="question26" type="radio" />
+              <label for="radio76"
+                >  Irregular, erratic</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio77" value="fire" name="question26" type="radio" />
+              <label for="radio77"
+                >  Organized, inflexible</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio78" value="water" name="question26" type="radio" />
+              <label for="radio78"
+                >  Routine, lazy, resists change</label
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up">
+            <h4 class="question">Faith</h4>
+            <div class="inputGroup">
+              <input id="radio79" value="wind" name="question27" type="radio" />
+              <label for="radio79"
+                >  Variable, erratic</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio80" value="fire" name="question27" type="radio" />
+              <label for="radio80"
+                >  Strong, determined</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio81" value="water" name="question27" type="radio" />
+              <label for="radio81"
+                >  Steady, slow to change</label
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up">
+            <h4 class="question">Relationships</h4>
+            <div class="inputGroup">
+              <input id="radio82" value="wind" name="question28" type="radio" />
+              <label for="radio82"
+                >  Changeable, unreliable</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio83" value="fire" name="question28" type="radio" />
+              <label for="radio83"
+                >  Fixated, domineering</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio84" value="water" name="question28" type="radio" />
+              <label for="radio84"
+                >  Steady, clinging</label
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up">
+            <h4 class="question">Social temperament</h4>
+            <div class="inputGroup">
+              <input id="radio85" value="wind" name="question29" type="radio" />
+              <label for="radio85"
+                >  Rebel, innovator</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio86" value="fire" name="question29" type="radio" />
+              <label for="radio86"
+                >  Leader, fanatic</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio87" value="water" name="question29" type="radio" />
+              <label for="radio87"
+                >  Conservative, provider</label
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up">
+            <h4 class="question">Response to Therapy</h4>
+            <div class="inputGroup">
+              <input id="radio88" value="wind" name="question30" type="radio" />
+              <label for="radio88"
+                >  Needs to be calmed</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio89" value="fire" name="question30" type="radio" />
+              <label for="radio89"
+                >  Needs proper direction</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio90" value="water" name="question30" type="radio" />
+              <label for="radio90"
+                >  Needs to be motivated</label
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up">
+            <h4 class="question">Reaction to Medications</h4>
+            <div class="inputGroup">
+              <input id="radio91" value="wind" name="question31" type="radio" />
+              <label for="radio91"
+                >  Unpredictable, quick to side-effects</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio92" value="fire" name="question31" type="radio" />
+              <label for="radio92"
+                >  Can get overheated by</label
+              >
+            </div>
+            <div class="inputGroup">
+              <input id="radio93" value="water" name="question31" type="radio" />
+              <label for="radio93"
+                >  Easily becomes dependent on</label
+              >
+            </div>
+          </div>
+
+          
+        </div>
+      </form>
+
+      <div class="row">
+        <div class="col-md-12" data-aos="fade-up">
+          <a href="#results"><button id="submitButton" class="btn btn-outline-success btn-ayurveda margin-top-large">
+            See results
+          </button></a>
+        </div>
+      </div>
+
+    <section id="results">
+
+     
+      <div class="row">
+        <div class="col-md-6" data-aos="fade-up">
+          <div class="chart">
+            <canvas id="polar-chart" width="100%" height="50%"></canvas>
+          </div>
+        </div>
+        <div class="col-md-6" data-aos="fade-up">
+          <p id="doshanumbers" class="lead">
+            <span id="windresult"></span><br>
+            <span id="fireresult"></span><br>
+            <span id="waterresult"></span>
+
+            <p class="lead"><span id="percentages"> </span></p>
+          </p>
+          <p id="wheretogo" class="lead">
+            <b>Where to go from here?</b>
+            <br>
+            The <a href="https://www.healthygamer.gg/">HealthyGamer</a> community has a lot of material to learn more about your Dosha imbalances, join their <a href="https://discord.gg/healthygamergg">Discord</a> and follow them on <a href="https://twitter.com/healthygamergg">Twitter</a>, <a href="https://www.twitch.tv/healthygamer_gg">Twitch</a> and <a href="https://www.youtube.com/healthygamergg">Youtube</a>
+
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+    <hr>
+      <footer>
+        <div class="row" >
+          <div class="col">
+            <p class="text-center lead footer">
+              v0.3 Made with <i class="fas fa-heart"></i> by
+              <a href="https://twitter.com/rugleh">@Rugleh</a> for the World and
+              the
+              <a href="https://twitter.com/healthygamergg">@HealthyGamer.gg</a>
+              Community
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
